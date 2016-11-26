@@ -16,30 +16,15 @@ defmodule AnalysisPrep.Mixfile do
      package: package]
   end
 
-  # Configuration for the OTP application
-  #
-  # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger]]
   end
 
-  # Dependencies can be Hex packages:
-  #
-  #   {:mydep, "~> 0.3.0"}
-  #
-  # Or git/path repositories:
-  #
-  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
-  #
-  # To depend on another app inside the umbrella:
-  #
-  #   {:myapp, in_umbrella: true}
-  #
-  # Type "mix help deps" for more examples and options
   defp deps do
     [
       {:combination, ">= 0.0.2"},
       {:csv, "~> 1.4.2"}, 
+      {:ex_doc, ">= 0.0.0", only: :dev},
       {:gen_stage, "~> 0.4"},
       {:mix_test_watch, "~> 0.2", only: :test},
       {:ratio, "~> 1.0.0"},
