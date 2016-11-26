@@ -4,7 +4,7 @@ defmodule AnalysisPrep.Mixfile do
   def project do
     [app: :analysis_prep,
      description: "Analysis preparation for data series for machine learning and other analysis.",
-     version: "0.1.0",
+     version: File.read!("VERSION") |> String.strip,
      build_path: "../../_build",
      config_path: "../../config/config.exs",
      deps_path: "../../deps",
