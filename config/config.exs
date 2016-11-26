@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :metrics, key: :value
+#     config :analysis_prep, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:metrics, :key)
+#     Application.get_env(:analysis_prep, :key)
 #
 # Or configure a 3rd-party app:
 #

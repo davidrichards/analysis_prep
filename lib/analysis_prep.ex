@@ -1,6 +1,6 @@
 defmodule AnalysisPrep do
   @moduledoc """
-  Generic metrics for data series.
+  Analysis preparation for data series.
 
   Incorporates the excellent elixir-statistics with the types of things needed for exploratory
   analysis and preparing to use data in machine learning algorithms.

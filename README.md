@@ -30,19 +30,19 @@ This is a work in progress. There are several things I'd still like to add.
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
-  1. Add `metrics` to your list of dependencies in `mix.exs`:
+  1. Add `analysis_prep` to your list of dependencies in `mix.exs`:
 
     ```elixir
     def deps do
-      [{:metrics, "~> 0.1.0"}]
+      [{:analysis_prep, "~> 0.1.0"}]
     end
     ```
 
-  2. Ensure `metrics` is started before your application:
+  2. Ensure `analysis_prep` is started before your application:
 
     ```elixir
     def application do
-      [applications: [:metrics]]
+      [applications: [:analysis_prep]]
     end
     ```
 
