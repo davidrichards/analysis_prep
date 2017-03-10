@@ -1,7 +1,7 @@
 defmodule AnalysisPrep.Summary do
   @moduledoc """
   Summarize a data series.
-  
+
   Assume it's a continuous data series. Returns the normal kinds of analysis_prep:
 
   * count

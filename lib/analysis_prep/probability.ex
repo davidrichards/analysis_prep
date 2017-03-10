@@ -85,13 +85,13 @@ defmodule AnalysisPrep.Probability do
 
   """
   def joint(a, b) do
-    Enum.flat_map(a, fn({k1, v1}) -> 
+    Enum.flat_map(a, fn({k1, v1}) ->
       Enum.map(b, fn({k2, v2}) ->
         {{k1, k2}, v1 * v2}
       end)
     end)
     |> Enum.into(%{})
-    
+
   end
 
   @doc """
@@ -152,11 +152,11 @@ defmodule AnalysisPrep.Probability do
   def sample([], _), do: nil
   def sample(_, 0), do: nil
   def sample(list, 1) do
-    set_seed!
+    set_seed!()
     hd get_sample(list, 1)
   end
   def sample(list, n) do
-    set_seed!
+    set_seed!()
     get_sample(list, n)
   end
 

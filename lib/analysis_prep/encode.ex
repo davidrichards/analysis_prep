@@ -10,7 +10,7 @@ defmodule AnalysisPrep.Encode do
 
       iex> one_hot ["a", "b", "a"]
       [["a", "b"], [1,0], [0,1], [1,0]]
-      
+
       iex> one_hot []
       []
 

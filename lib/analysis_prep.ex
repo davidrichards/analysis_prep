@@ -47,7 +47,7 @@ defmodule AnalysisPrep do
   def summary(list, type \\ :continuous), do: Summary.summary(list, type)
   def one_hot(list), do: Encode.one_hot(list)
   def label(list), do: Encode.label(list)
-  def frequency(list), do: Frequency.frequency(list)
+  def frequency(list, base \\ %{}), do: Frequency.frequency(list, base)
   def normalize(object, max \\ nil), do: Normalize.normalize(object, max)
   def scale(list, opts \\ []), do: Scale.scale(list, opts)
   def p(event, space), do: Probability.p(event, space)
@@ -58,19 +58,19 @@ defmodule AnalysisPrep do
   def sample(list, n \\ 1), do: Probability.sample(list, n)
   def choose(n, c), do: Probability.choose(n, c)
 
-  @doc """                                                                  
-  values of a map or defer to Statistics.sum                            
+  @doc """
+  values of a map or defer to Statistics.sum
 
   Examples
 
       iex> sum_map(%{a: 1, b: 2})
       3
 
-  """                                                                       
-  def sum_map(map) do                                                        
-    map                                                                
-    |> Map.values                                                         
-    |> Statistics.sum                                                     
+  """
+  def sum_map(map) do
+    map
+    |> Map.values
+    |> Statistics.sum
   end
 
   @doc """
